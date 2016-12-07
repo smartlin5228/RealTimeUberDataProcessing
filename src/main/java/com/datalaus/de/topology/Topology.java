@@ -45,6 +45,7 @@ public class Topology implements Serializable{
             //Set Components
             topologyBuilder.setSpout("batchFileSpout", kafkaSpout, 1);
             topologyBuilder.setBolt("WordSplitBolt", new WordSplitterBolt(5)).shuffleGrouping("batchFileSpout");
+            topologyBuilder.setBolt("HbaseBolt", HBaseUpdateBolt.make(topologyConfig)).shuffleGrouping("WordCounterBolt");
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
