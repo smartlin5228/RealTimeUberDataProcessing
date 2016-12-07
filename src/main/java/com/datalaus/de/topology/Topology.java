@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Properties;
 import java.util.UUID;
 
+import com.datalaus.de.bolts.HBaseUpdateBolt;
 import com.datalaus.de.bolts.WordSplitterBolt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
