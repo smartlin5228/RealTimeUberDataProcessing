@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ae5c87f4-58a0-465c-9240-8c287b2527e5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/datalaus/de/topology/Topology.java" afterPath="$PROJECT_DIR$/src/main/java/com/datalaus/de/topology/Topology.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +21,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Topology.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Topology.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/datalaus/de/topology/Topology.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="338">
@@ -45,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HBaseTable.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HBaseTable.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/HBaseTable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
@@ -630,7 +629,7 @@
       <workItem from="1481096198643" duration="599000" />
       <workItem from="1481105687519" duration="633000" />
       <workItem from="1481107818009" duration="214000" />
-      <workItem from="1481108087860" duration="3113000" />
+      <workItem from="1481108087860" duration="3230000" />
     </task>
     <task id="LOCAL-00001" summary="HBase Insert Function&#10;">
       <created>1481075224741</created>
@@ -660,11 +659,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481149565265</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="HBaseTable all functions done, updated HBaseUpdateBolt, Updated Topology">
+      <created>1481149640313</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1481149640313</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17384000" />
+    <option name="totallyTimeSpent" value="17501000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -711,7 +717,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="HBase Insert Function&#10;" />
     <MESSAGE value="HBaseTable all functions done, updated HBaseUpdateBolt" />
-    <option name="LAST_COMMIT_MESSAGE" value="HBaseTable all functions done, updated HBaseUpdateBolt" />
+    <MESSAGE value="HBaseTable all functions done, updated HBaseUpdateBolt, Updated Topology" />
+    <option name="LAST_COMMIT_MESSAGE" value="HBaseTable all functions done, updated HBaseUpdateBolt, Updated Topology" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1021,13 +1028,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/HBaseTable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/datalaus/de/topology/Topology.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="338">
+          <caret line="48" column="59" lean-forward="false" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,11 +1047,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/datalaus/de/topology/Topology.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/HBaseTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="48" column="59" lean-forward="false" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
-          <folding />
+        <state relative-caret-position="230">
+          <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
