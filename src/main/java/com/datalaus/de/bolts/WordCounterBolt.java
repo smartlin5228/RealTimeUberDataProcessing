@@ -3,7 +3,6 @@ package com.datalaus.de.bolts;
 import backtype.storm.task.OutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.OutputFieldsDeclarer;
-import backtype.storm.topology.TopologyBuilder;
 import backtype.storm.topology.base.BaseRichBolt;
 import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
@@ -25,25 +24,26 @@ public class WordCounterBolt extends BaseRichBolt {
 
     private final long logIntervalSec;
     private final long clearIntervalSec;
+
     private final int topListSize;
 
     private Map<String, Long> counter;
     private long lastLogTime;
     private long lastClearTime;
 
-    private OutputCollector outputCollector;
+    private OutputCollector collector;
 
     public WordCounterBolt(long logIntervalSec, long clearIntervalSec, int topListSize) {
-        this.clearIntervalSec = clearIntervalSec;
         this.logIntervalSec = logIntervalSec;
+        this.clearIntervalSec = clearIntervalSec;
         this.topListSize = topListSize;
     }
 
-    public void prepare(Map counter, TopologyContext topologyContext, OutputCollector outputCollector) {
+    public void prepare(Map map, TopologyContext topologyContext, OutputCollector outputCollector) {
         counter = new HashMap<String, Long>();
         lastClearTime = System.currentTimeMillis();
         lastLogTime = System.currentTimeMillis();
-        this.outputCollector = outputCollector;
+        this.collector = outputCollector;
     }
 
     public void declareOutputFields(OutputFieldsDeclarer outputFieldsDeclarer) {
@@ -52,16 +52,16 @@ public class WordCounterBolt extends BaseRichBolt {
 
     public void execute(Tuple input) {
         String word = (String) input.getValueByField("word");
-        Long count = counter.get(word);
+        Long count = counter.get(word) == null ? 1l:counter.get(word);
         count = count == null ? 1L : count + 1;
         counter.put(word, count);
-        outputCollector.emit(new Values(word, count));
+        collector.emit(new Values(word, count));
 
         long now = System.currentTimeMillis();
-        long logPeriodSec = (now - lastLogTime) /1000;
-        if (logPeriodSec >logIntervalSec) {
+        long logPeriodSec = (now - lastLogTime) / 1000;
+        if (logPeriodSec > logIntervalSec) {
             logger.info("\n\n");
-            logger.info("Word count: "+counter.size());
+            logger.info("Word count: " + counter.size());
 
             publishTopList();
             lastLogTime = now;

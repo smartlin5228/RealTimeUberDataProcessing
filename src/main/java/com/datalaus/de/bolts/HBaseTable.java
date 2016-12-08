@@ -7,7 +7,6 @@ import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
 
 import java.io.IOException;
-import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.List;
 

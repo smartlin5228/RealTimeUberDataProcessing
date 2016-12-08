@@ -57,7 +57,7 @@ public class KafkaFileProducer extends Thread {
 				producer.send(new ProducerRecord<String, String>(properties.getProperty("topicName"), key, value)).get();
 				System.out.println("Send message: ("+ key + ", " + value + ")");
 				Utils.sleep(360 * 100);
-			} catch ( InterruptedException e) {
+			} catch (InterruptedException e) {
 				e.printStackTrace();
 			} catch (ExecutionException e) {
 				e.printStackTrace();

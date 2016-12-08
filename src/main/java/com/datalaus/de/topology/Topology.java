@@ -49,9 +49,11 @@ public class Topology implements Serializable{
 			spoutConfig.scheme = new SchemeAsMultiScheme(new StringScheme());
             KafkaSpout kafkaSpout = new KafkaSpout(spoutConfig);
             //Set Components
-            topologyBuilder.setSpout("batchFileSpout", kafkaSpout, 1);
-            topologyBuilder.setBolt("WordSplitBolt", new WordSplitterBolt(5)).shuffleGrouping("batchFileSpout");
+			topologyBuilder.setSpout("batchFileSpout", kafkaSpout, 1);
+			topologyBuilder.setBolt("WordSplitterBolt", new WordSplitterBolt(5)).shuffleGrouping("batchFileSpout");
 			topologyBuilder.setBolt("WordCounterBolt", new WordCounterBolt(10, 5 * 60, 50)).shuffleGrouping("WordSplitterBolt");
+			//add hbasebolt
+			//topologyBuilder.setBolt("redis", new RedisBolt()).shuffleGrouping("WordCounterBolt");
 			topologyBuilder.setBolt("HbaseBolt", HBaseUpdateBolt.make(topologyConfig)).shuffleGrouping("WordCounterBolt");
 			if (null != args && 0 < args.length) {
 				config.setNumWorkers(3);
