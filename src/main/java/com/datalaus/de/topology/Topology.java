@@ -8,9 +8,7 @@ import backtype.storm.LocalCluster;
 import backtype.storm.StormSubmitter;
 import backtype.storm.generated.InvalidTopologyException;
 import backtype.storm.utils.Utils;
-import com.datalaus.de.bolts.HBaseUpdateBolt;
-import com.datalaus.de.bolts.WordCounterBolt;
-import com.datalaus.de.bolts.WordSplitterBolt;
+import com.datalaus.de.bolts.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,10 +48,12 @@ public class Topology implements Serializable{
             KafkaSpout kafkaSpout = new KafkaSpout(spoutConfig);
             //Set Components
 			topologyBuilder.setSpout("batchFileSpout", kafkaSpout, 1);
+
 			topologyBuilder.setBolt("WordSplitterBolt", new WordSplitterBolt(5)).shuffleGrouping("batchFileSpout");
 			topologyBuilder.setBolt("WordCounterBolt", new WordCounterBolt(10, 5 * 60, 50)).shuffleGrouping("WordSplitterBolt");
+			topologyBuilder.setBolt("FilterBolt", new FilterBolt(5)).shuffleGrouping("batchFileSpout");
 			//add hbasebolt
-			//topologyBuilder.setBolt("redis", new RedisBolt()).shuffleGrouping("WordCounterBolt");
+			topologyBuilder.setBolt("redis", new RedisBolt()).shuffleGrouping("WordCounterBolt");
 			topologyBuilder.setBolt("HbaseBolt", HBaseUpdateBolt.make(topologyConfig)).shuffleGrouping("WordCounterBolt");
 			if (null != args && 0 < args.length) {
 				config.setNumWorkers(3);
