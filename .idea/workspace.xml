@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae5c87f4-58a0-465c-9240-8c287b2527e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/FilterBolt.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/RedisBolt.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/RedisBolt.java" afterPath="$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/RedisBolt.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/datalaus/de/topology/Topology.java" afterPath="$PROJECT_DIR$/src/main/java/com/datalaus/de/topology/Topology.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="Topology.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/datalaus/de/topology/Topology.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="55" column="53" lean-forward="false" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
+            <state relative-caret-position="720">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -37,22 +36,11 @@
       <file leaf-file-name="RedisBolt.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/RedisBolt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            <state relative-caret-position="936">
+              <caret line="77" column="1" lean-forward="false" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1482224863523" expanded="true" signature="39:55" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Demo" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -193,8 +181,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/HBaseUpdateBolt.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/WordCounterBolt.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/FilterBolt.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/RedisBolt.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/datalaus/de/topology/Topology.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/RedisBolt.java" />
       </list>
     </option>
   </component>
@@ -791,7 +779,7 @@
       <workItem from="1481330981619" duration="21000" />
       <workItem from="1481919173353" duration="4446000" />
       <workItem from="1482118166235" duration="1344000" />
-      <workItem from="1482223605882" duration="1306000" />
+      <workItem from="1482223605882" duration="2109000" />
     </task>
     <task id="LOCAL-00001" summary="HBase Insert Function&#10;">
       <created>1481075224741</created>
@@ -856,11 +844,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481168954743</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="RedisBolt">
+      <created>1482224934702</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1482224934702</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33780000" />
+    <option name="totallyTimeSpent" value="34583000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -878,7 +873,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37189054" sideWeight="0.49574015" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21517412" sideWeight="0.5021299" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.008706467" sideWeight="0.5021299" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.4978701" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40422887" sideWeight="0.48296058" order="11" side_tool="false" content_ui="tabs" />
@@ -911,7 +906,8 @@
     <MESSAGE value="HBaseTable all functions done, updated HBaseUpdateBolt, Updated Topology" />
     <MESSAGE value="Updated Topology, set WordCounter Bolt, Added Constants" />
     <MESSAGE value="Debugged" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debugged" />
+    <MESSAGE value="RedisBolt" />
+    <option name="LAST_COMMIT_MESSAGE" value="RedisBolt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -924,16 +920,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/datalaus/de/spouts/KafkaFileProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="59" column="21" lean-forward="false" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/datalaus/de/utils/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1432,21 +1418,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/datalaus/de/topology/Topology.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="55" column="53" lean-forward="false" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
+        <state relative-caret-position="720">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/datalaus/de/bolts/RedisBolt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        <state relative-caret-position="936">
+          <caret line="77" column="1" lean-forward="false" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1482224863523" expanded="true" signature="39:55" ph="..." />
           </folding>
         </state>
       </provider>

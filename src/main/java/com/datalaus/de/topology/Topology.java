@@ -49,12 +49,13 @@ public class Topology implements Serializable{
             //Set Components
 			topologyBuilder.setSpout("batchFileSpout", kafkaSpout, 1);
 
-			topologyBuilder.setBolt("WordSplitterBolt", new WordSplitterBolt(5)).shuffleGrouping("batchFileSpout");
-			topologyBuilder.setBolt("WordCounterBolt", new WordCounterBolt(10, 5 * 60, 50)).shuffleGrouping("WordSplitterBolt");
+//			topologyBuilder.setBolt("WordSplitterBolt", new WordSplitterBolt(5)).shuffleGrouping("batchFileSpout");
+//			topologyBuilder.setBolt("WordCounterBolt", new WordCounterBolt(10, 5 * 60, 50)).shuffleGrouping("WordSplitterBolt");
 			topologyBuilder.setBolt("FilterBolt", new FilterBolt(5)).shuffleGrouping("batchFileSpout");
-			//add hbasebolt
-			topologyBuilder.setBolt("redis", new RedisBolt()).shuffleGrouping("WordCounterBolt");
+			topologyBuilder.setBolt("WordCounterBolt", new WordCounterBolt(10, 5 * 60, 50)).shuffleGrouping("FilterBolt");
 			topologyBuilder.setBolt("HbaseBolt", HBaseUpdateBolt.make(topologyConfig)).shuffleGrouping("WordCounterBolt");
+			topologyBuilder.setBolt("redis", new RedisBolt()).shuffleGrouping("WordCounterBolt");
+
 			if (null != args && 0 < args.length) {
 				config.setNumWorkers(3);
 				StormSubmitter.submitTopology(args[0], config, topologyBuilder.createTopology());
@@ -71,7 +72,7 @@ public class Topology implements Serializable{
 			}
 		} catch (final InvalidTopologyException e) {
 			e.printStackTrace();
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			e.printStackTrace();
 		}
 	}
